@@ -1,7 +1,6 @@
 terraform {
   backend "s3" {
     bucket = "aws-lambda-tf-test"
-    key    = "path/to/my/key"
     region = "us-west-1"
   }
 }
@@ -10,17 +9,13 @@ terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
-      Version = "~>3.27"
     }
   }
-
-  required_version = ">=0.14.9"
 
 }
 
 provider "aws" {
-  version = "~>3.0"
-  region  = "east-us-1"
+  region  = "us-west-1"
 }
 
 ### Cloud Function
