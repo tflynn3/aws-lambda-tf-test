@@ -1,18 +1,16 @@
 terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+    }
+  }
+  
   backend "s3" {
     bucket = "aws-lambda-tf-test"
     region = "us-west-1"
   }
 }
 
-terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-    }
-  }
-
-}
 
 provider "aws" {
   region  = "us-west-1"
