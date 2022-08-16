@@ -7,7 +7,7 @@ terraform {
   
   backend "s3" {
     bucket = "aws-lambda-tf-test"
-    key    = "tfstate/key"
+    key    = "state.tfstate"
     region = "us-west-1"
   }
 }
