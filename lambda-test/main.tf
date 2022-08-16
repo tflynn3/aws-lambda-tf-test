@@ -45,6 +45,11 @@ resource "aws_iam_role" "iam_for_lambda" {
 EOF
 }
 
+resource "aws_lambda_function_url" "test_latest" {
+  function_name      = aws_lambda_function.test_lambda.function_name
+  authorization_type = "NONE"
+}
+
 resource "aws_lambda_function" "test_lambda" {
   # If the file is not in the current working directory you will need to include a 
   # path.module in the filename.
