@@ -66,3 +66,8 @@ resource "aws_lambda_function" "test_lambda" {
   runtime = "python3.9"
 
 }
+
+
+output "lambda_url" {
+  value = aws_lambda_function_url.test_latest.function_url
+}
