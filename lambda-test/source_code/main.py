@@ -1,2 +1,3 @@
 def lambda_handler(event, context):
-  return 'Hello World 2!'
+    """ return string response to clients"""
+    return 'Hello World 3!'
